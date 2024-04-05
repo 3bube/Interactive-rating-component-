@@ -1,0 +1,149 @@
+:root {
+  --primary-100: hsl(25, 97%, 53%);
+  --neutral-100: hsl(0, 0%, 100%);
+  --neutral-200: hsl(217, 12%, 63%);
+  --neutral-300: hsl(216, 12%, 54%);
+  --neutral-400: hsl(213, 19%, 18%);
+  --neutral-500: hsl(216, 12%, 8%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  background-color: #000;
+  display: grid;
+  place-items: center;
+  height: 100%;
+  font-family: "Overpass", sans-serif;
+  font-size: 15px;
+}
+
+.rating-card {
+  margin: auto 0;
+  background-color: var(--neutral-500);
+  width: 20rem;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 16rem;
+  border-radius: 20px;
+}
+
+@media (max-width: 400px) {
+  .rating-card {
+    padding: 3rem 12rem;
+  }
+
+  .star {
+    margin-left: 60px;
+  }
+
+  .rating-title {
+    font-size: 2.5em;
+    padding-left: 60px;
+  }
+
+  .rating-card p {
+    font-size: 1em !important;
+    margin-left: 55px;
+  }
+
+  .rating-number span {
+    padding: 23px !important;
+  }
+
+  button {
+    width: 350px !important;
+    padding: 15px;
+    margin-left: 35px !important;
+  }
+}
+
+.star {
+  padding: 20px;
+  border-radius: 50%;
+  background-color: hsl(216, 12%, 15%);
+  width: 20px;
+  height: 20px;
+}
+
+.star svg {
+  padding-top: 2px;
+  overflow: visible;
+}
+
+.rating-title {
+  font-size: 2em;
+  font-weight: 500;
+  color: var(--neutral-100);
+  margin: 1.8em 0 0.8em 0;
+}
+
+.rating-card p {
+  color: var(--neutral-200);
+  line-height: 26px;
+  font-size: 1.1em;
+  width: 360px;
+  margin-bottom: 20px;
+}
+
+.rating-number {
+  font-size: 1.4em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--neutral-200);
+  cursor: pointer;
+}
+
+.rating-number span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px; /* Adjust as needed to ensure a circle */
+  margin-right: 20px;
+  border: none;
+  border-radius: 50%; /* This creates the round shape */
+  width: 30px; /* Or any other value */
+  height: 30px; /* This should be equal to the width */
+  line-height: 30px; /* Centers the number vertically */
+  background-color: hsl(216, 12%, 15%);
+  transition: 0.1s;
+}
+
+.clicked {
+  background-color: var(--primary-100) !important;
+  color: var(--neutral-100);
+}
+
+.rating-number span:hover {
+  background-color: hsl(216, 12%, 45%);
+  color: var(--neutral-100);
+}
+
+button {
+  width: 420px;
+  padding: 15px;
+  margin: 1.6em 0 0;
+  border-radius: 30px;
+  background-color: var(--primary-100);
+  border: none;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  color: var(--neutral-100);
+  font-weight: 600;
+  letter-spacing: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:active {
+  background-color: var(--neutral-100);
+  color: var(--primary-100);
+}

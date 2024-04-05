@@ -1,0 +1,67 @@
+:root {
+  --primary-100: hsl(25, 97%, 53%);
+  --neutral-100: hsl(0, 0%, 100%);
+  --neutral-200: hsl(217, 12%, 63%);
+  --neutral-300: hsl(216, 12%, 54%);
+  --neutral-400: hsl(213, 19%, 18%);
+  --neutral-500: hsl(216, 12%, 8%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  background-color: #000;
+  display: grid;
+  place-items: center;
+  height: 100%;
+  font-family: "Overpass", sans-serif;
+  font-size: 15px;
+}
+
+.container {
+  margin: auto 0;
+  background-color: var(--neutral-500);
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 4rem;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.js-rating {
+  color: var(--primary-100);
+  padding: 7px 15px;
+  margin: 1.5em 0 0 0;
+  background-color: hsl(216, 12%, 15%);
+  border-radius: 20px;
+  font-size: 0.8em;
+}
+
+h1 {
+  font-size: 1.3em;
+  font-weight: 500;
+  color: var(--neutral-100);
+  margin: 1.4em 0 0.7em 0;
+}
+
+.text {
+  color: var(--neutral-200);
+  line-height: 26px;
+  font-size: 1.1em;
+  max-width: 378px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 400px) {
+  .container {
+    width: 24rem !important;
+  }
+}
